@@ -1,7 +1,7 @@
 spring:
     profiles:
-        active: #表明当前启用的配置信息是开发环境的
-        - dev  
+        active: 
+        - dev  #表明当前启用的配置信息是开发环境的
 
 my:
   demo: "这个信息都会被获取到"
