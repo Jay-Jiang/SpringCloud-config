@@ -1,0 +1,22 @@
+spring:
+    profiles:
+        active: #表明当前启用的配置信息是开发环境的
+        - dev   
+
+---
+spring:
+    profiles: dev #开发环境
+    application:
+        name: spring-cloud-config-dev
+        
+---
+spring:
+    profiles: test #测试环境
+    application:
+        name: spring-cloud-config-test
+        
+        
+#注意事项：本文件需要以 UTF8 格式保存，避免微服务读取时中文乱码
+#说明：
+#  1. 以 --- 为分隔符，实现同一个配置文件中，定义不同的环境配置。
+#  2. - 表示的是取数组中的某一个元素
